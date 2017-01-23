@@ -20,11 +20,11 @@
     },
     "autoload": {
         "classmap": [
-            "src/Tinyrocket/Magento/Connections/Exceptions.php",
-            "src/Tinyrocket/Magento/Objects/Exceptions.php"
+            "src/Iveoles/Magento/Connections/Exceptions.php",
+            "src/Iveoles/Magento/Objects/Exceptions.php"
         ],
         "psr-0": {
-            "Tinyrocket\\Magento\\": "src/"
+            "Iveoles\\Magento\\": "src/"
         }
     },
     "extra": {
