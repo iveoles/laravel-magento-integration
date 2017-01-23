@@ -50,7 +50,7 @@ class MagentoServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-		$this->package('iveoles/laravel-magento-integration');
+		$this->package('iveoles/magento');
 
 	}
 
