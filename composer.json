@@ -1,5 +1,5 @@
 {
-    "name": "tinyrocket/magento",
+    "name": "iveoles/laravel-magento-integration",
     "description": "A simple Magento Integration using SOAP v1 and v2",
     "version": "1.0.0",
     "keywords": ["laravel", "magento", "soap"],
@@ -8,6 +8,10 @@
         {
             "name": "Michael Kyle Martin",
             "email": "michael@tinyrocket.co"
+        },
+        {
+            "name": "Adam Greer",
+            "email": "adam.greer@netmatters.com"
         }
     ],
     "require": {
@@ -16,7 +20,6 @@
     },
     "autoload": {
         "classmap": [
-            "src/migrations",
             "src/Tinyrocket/Magento/Connections/Exceptions.php",
             "src/Tinyrocket/Magento/Objects/Exceptions.php"
         ],
