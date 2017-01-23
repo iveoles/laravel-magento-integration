@@ -1,6 +1,6 @@
-<?php namespace Tinyrocket\Magento\Objects;
+<?php namespace Iveoles\Magento\Objects;
 
-use Tinyrocket\Magento\Objects\MagentoObjectException;
+use Iveoles\Magento\Objects\MagentoObjectException;
 
 /**
  * 	Magento API | Connection Exceptions

@@ -1,11 +1,11 @@
-<?php namespace Tinyrocket\Magento\Connections;
+<?php namespace Iveoles\Magento\Connections;
 
-use Tinyrocket\Magento\Connections\ConnectionNotProvidedException;
-use Tinyrocket\Magento\Connections\InvalidConnectionException;
-use Tinyrocket\Magento\Connections\MagentoSoapClientException;
-use Tinyrocket\Magento\Connections\MagentoSoapConfigurationException;
-use Tinyrocket\Magento\Objects\MagentoObjectCollection;
-use Tinyrocket\Magento\Objects\MagentoObject;
+use Iveoles\Magento\Connections\ConnectionNotProvidedException;
+use Iveoles\Magento\Connections\InvalidConnectionException;
+use Iveoles\Magento\Connections\MagentoSoapClientException;
+use Iveoles\Magento\Connections\MagentoSoapConfigurationException;
+use Iveoles\Magento\Objects\MagentoObjectCollection;
+use Iveoles\Magento\Objects\MagentoObject;
 
 /**
  * 	Magento API | Connection Exceptions

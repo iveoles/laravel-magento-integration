@@ -1,4 +1,4 @@
-<?php namespace Tinyrocket\Magento;
+<?php namespace Iveoles\Magento;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -6,19 +6,19 @@ use Illuminate\Support\ServiceProvider;
  * 	Magento API | Connection Exceptions
  *
  *	The MIT License (MIT)
- *	
+ *
  *	Copyright (c) 2014 TinyRocket
- *	
+ *
  *	Permission is hereby granted, free of charge, to any person obtaining a copy
  *	of this software and associated documentation files (the "Software"), to deal
  *	in the Software without restriction, including without limitation the rights
  *	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
  *	copies of the Software, and to permit persons to whom the Software is
  *	furnished to do so, subject to the following conditions:
- *	
+ *
  *	The above copyright notice and this permission notice shall be included in
  *	all copies or substantial portions of the Software.
- *	
+ *
  *	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  *	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  *	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -50,7 +50,7 @@ class MagentoServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-		$this->package('tinyrocket/magento');
+		$this->package('iveoles/laravel-magento-integration');
 
 	}
 
@@ -94,7 +94,7 @@ class MagentoServiceProvider extends ServiceProvider {
 	    $this->app->booting(function()
         {
             $loader = \Illuminate\Foundation\AliasLoader::getInstance();
-            $loader->alias('MagentoSoapClient', 'Tinyrocket\Magento\Facades\MagentoSoapClient');
+            $loader->alias('MagentoSoapClient', 'Iveoles\Magento\Facades\MagentoSoapClient');
         });
 	}
 
@@ -113,7 +113,7 @@ class MagentoServiceProvider extends ServiceProvider {
 	    $this->app->booting(function()
         {
             $loader = \Illuminate\Foundation\AliasLoader::getInstance();
-            $loader->alias('MagentoSoapStorage', 'Tinyrocket\Magento\Facades\MagentoSoapStorage');
+            $loader->alias('MagentoSoapStorage', 'Iveoles\Magento\Facades\MagentoSoapStorage');
         });
 	}
 

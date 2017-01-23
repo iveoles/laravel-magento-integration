@@ -1,25 +1,25 @@
-<?php namespace Tinyrocket\Magento\Objects;
+<?php namespace Iveoles\Magento\Objects;
 
-use Tinyrocket\Magento\Objects\MagentoObject;
-use Tinyrocket\Magento\Objects\MagentoObjectCollectionException;
+use Iveoles\Magento\Objects\MagentoObject;
+use Iveoles\Magento\Objects\MagentoObjectCollectionException;
 
 /**
  *  Magento API | Connection Exceptions
  *
  *  The MIT License (MIT)
- *  
+ *
  *  Copyright (c) 2014 TinyRocket
- *  
+ *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
  *  in the Software without restriction, including without limitation the rights
  *  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
  *  copies of the Software, and to permit persons to whom the Software is
  *  furnished to do so, subject to the following conditions:
- *  
+ *
  *  The above copyright notice and this permission notice shall be included in
  *  all copies or substantial portions of the Software.
- *  
+ *
  *  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  *  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  *  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -72,7 +72,7 @@ class MagentoObjectCollection {
     /**
      *  Get Collection
      *
-     *  @return Tinyrocket\Magento\Objects\MagentoObjectCollection
+     *  @return Iveoles\Magento\Objects\MagentoObjectCollection
      */
     public function getCollection()
     {

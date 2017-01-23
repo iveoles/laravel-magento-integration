@@ -1,11 +1,11 @@
-<?php namespace Tinyrocket\Magento;
+<?php namespace Iveoles\Magento;
 
-use Tinyrocket\Magento\Connections\InvalidConnectionException;
-use Tinyrocket\Magento\Connections\MagentoSoapStorage;
-use Tinyrocket\Magento\Connections\MagentoSoapClient;
-use Tinyrocket\Magento\Connections\MagentoSoapClientException;
-use Tinyrocket\Magento\Objects\MagentoObjectCollection;
-use Tinyrocket\Magento\Objects\MagentoObject;
+use Iveoles\Magento\Connections\InvalidConnectionException;
+use Iveoles\Magento\Connections\MagentoSoapStorage;
+use Iveoles\Magento\Connections\MagentoSoapClient;
+use Iveoles\Magento\Connections\MagentoSoapClientException;
+use Iveoles\Magento\Objects\MagentoObjectCollection;
+use Iveoles\Magento\Objects\MagentoObject;
 
 use Illuminate\Config\Repository;
 
@@ -14,19 +14,19 @@ use Illuminate\Config\Repository;
  * 	Magento API | Connection Exceptions
  *
  *	The MIT License (MIT)
- *	
+ *
  *	Copyright (c) 2014 TinyRocket
- *	
+ *
  *	Permission is hereby granted, free of charge, to any person obtaining a copy
  *	of this software and associated documentation files (the "Software"), to deal
  *	in the Software without restriction, including without limitation the rights
  *	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
  *	copies of the Software, and to permit persons to whom the Software is
  *	furnished to do so, subject to the following conditions:
- *	
+ *
  *	The above copyright notice and this permission notice shall be included in
  *	all copies or substantial portions of the Software.
- *	
+ *
  *	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  *	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  *	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -96,7 +96,7 @@ class Magento {
 	public function call($connection = null)
 	{
 		if ( !is_array($connection) or is_null($connection) ) {
-			$connection = !is_null($connection) ? $this->getConnection($connection) : $this->getPrimaryConnection();			
+			$connection = !is_null($connection) ? $this->getConnection($connection) : $this->getPrimaryConnection();
 		}
 		return new MagentoSoapClient($connection);
 	}
@@ -193,7 +193,7 @@ class Magento {
 	/**
 	 *	Get Primary Connection
 	 *
-	 *	@return Tinyrocket\Magento\Connections\MagentoSoapClient
+	 *	@return Iveoles\Magento\Connections\MagentoSoapClient
 	 */
 	public function getPrimaryConnection()
 	{
@@ -224,7 +224,7 @@ class Magento {
 	 *	connection or the connection passed through to the function
 	 *
 	 *	@return string
-	 *	@example 
+	 *	@example
 	 */
 	public function getMagentoVersion($connection = null)
 	{
@@ -236,7 +236,7 @@ class Magento {
 	/**
 	 *	Get Primary Connection
 	 *
-	 *	@return Tinyrocket\Magento\Connections\MagentoSoapClient
+	 *	@return Iveoles\Magento\Connections\MagentoSoapClient
 	 */
 	public function setPrimaryConnection($name)
 	{
@@ -269,7 +269,7 @@ class Magento {
 	/**
 	 *	Register Connection
 	 *
-	 *	@return Tinyrocket\Magento\Connections\MagentoSoapClient
+	 *	@return Iveoles\Magento\Connections\MagentoSoapClient
 	 */
 	public function register($connection, $return = true, $forget = false)
 	{
@@ -288,9 +288,9 @@ class Magento {
 	}
 
 	/**
-	 *	Register Connection 
+	 *	Register Connection
 	 *
-	 *	@return Tinyrocket\Magento\Connections\MagentoSoapClient
+	 *	@return Iveoles\Magento\Connections\MagentoSoapClient
 	 */
 	public function batchRegister($connections)
 	{
@@ -307,7 +307,7 @@ class Magento {
 	 *	Get Functions
 	 *
 	 *	Extension of the __getFunctions method core to SoapClient
-	 *	
+	 *
 	 *	@return array
 	 */
 	public function getFunctions($connection = null)
