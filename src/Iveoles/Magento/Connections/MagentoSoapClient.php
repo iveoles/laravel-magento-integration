@@ -106,8 +106,10 @@ class MagentoSoapClient extends \SoapClient {
             } elseif ((strpos($method, 'Update') !== false) && count($args) != count($args, COUNT_RECURSIVE)) {
                 array_unshift($args, $this->session);
                 $this->results = $this->__soapCall($method, $args);
-            } else {
+            } elseif(isset($args['complex_filter'])) {
                 $this->results = $this->__soapCall($method, array($this->session, $args));
+            } else {
+                $this->results = $this->__soapCall($method, array_merge(array($this->session), $args));
             }
 
 			return $this->getResultsCollections();
