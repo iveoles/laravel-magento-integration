@@ -14,28 +14,30 @@
 |
 */
 
-return array(
+return [
 
-	'connections' => [
+    'connections' => [
 
-		// Default connection
-		'default'	=>	[
-			'site_url'	=>	'http://magentohost',
-			'user'		=>	'',
-			'key'		=>	'',
-			'version'   =>  'v2'
-		],
+        // Default connection
+        'default'   => [
+            'site_url' => 'http://magentohost',
+            'user'     => '',
+            'key'      => '',
+            'version'  => 'v2',
+            'options'  => [],
+        ],
 
-		// You can add as many connections as you'd like, as long
-		// as the name (e.g. secondary) is unique
-		'secondary'	=>	[
-			'site_url'	=>	'http://magentohost',
-			'user'		=>	'',
-			'key'		=>	'',
-			'version'   =>  'v2'
-		],
-	],
+        // You can add as many connections as you'd like, as long
+        // as the name (e.g. secondary) is unique
+        'secondary' => [
+            'site_url' => 'http://magentohost',
+            'user'     => '',
+            'key'      => '',
+            'version'  => 'v2',
+            'options'  => [],
+        ],
+    ],
 
-	// enable to see SOAP stack
-	'show_stack'	=>	false,
-);
+    // enable to see SOAP stack
+    'show_stack'  => false,
+];

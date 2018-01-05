@@ -98,7 +98,7 @@ class Magento {
 		if ( !is_array($connection) or is_null($connection) ) {
 			$connection = !is_null($connection) ? $this->getConnection($connection) : $this->getPrimaryConnection();
 		}
-		return new MagentoSoapClient($connection);
+		return new MagentoSoapClient($connection, $connection[key($connection)]['options']);
 	}
 
 	/**
@@ -107,7 +107,7 @@ class Magento {
 	public function get($method, $params = array(), $connection = null)
 	{
 		$connection = !is_null($connection) ? $this->getConnection($connection) : $this->getPrimaryConnection();
-		$soap = new MagentoSoapClient($connection);
+		$soap = new MagentoSoapClient($connection, $connection[key($connection)]['options']);
 		if ( (isset($connection[key($connection)]['version']) && (strtolower($connection[key($connection)]['version']) == 'v1') ) ) {
 			return $soap->call($method, $params);
 		} else {
@@ -229,7 +229,7 @@ class Magento {
 	public function getMagentoVersion($connection = null)
 	{
 		$connection = is_array($connection) ? $connection : $this->getConnection($connection);
-		$temporaryClient = new MagentoSoapClient($connection);
+		$temporaryClient = new MagentoSoapClient($connection, $connection[key($connection)]['options']);
 		return $temporaryClient->getMagentoVersion();
 	}
 
